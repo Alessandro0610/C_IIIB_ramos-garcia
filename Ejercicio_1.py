@@ -2,7 +2,8 @@
 Es una calculadora con las funciones Suma, Resta, Multiplicacion y Division,
 con un limpiador de consola que va a hacer un "cls"
 
-Creado por: Ramos Yefry   29/05/2025
+Creado por: Ramos Yefry   13/08/20254
+
 """
 
 
@@ -44,7 +45,13 @@ def MULTIPLICACION():#la opcion es una multiplicacion
     print(f"/nRESULTADO: {num1} * {num2} = {resultado}") # el resultado de num1 y num2
     input("presione enter para continuar...") #volver al programa de inicio
 
+def DIVISION():# la opcion es una division
+    print("division") #la operacion es una division
+    num1, num2 = DATOS() #los datos que van ingresar
+    resultado = num1 / num2 #la es una division
 
+    print(f"/nRESULTADO: {num1} / {num2} = {resultado}") # el resultado de la operacion de num1 y num2
+    input("presione enter para continuar...") #volver al programa de inicio
 
 while True:#estructura
     limpiar_consola() #opcion de limpiar la consola 
@@ -53,7 +60,8 @@ while True:#estructura
     print("1. Suma") #suma
     print("2. Resta") # despliega el mensaje que es una resta
     print("3. Mutiplicacion") # despliega el mensaje que es una multiplicacion
-    print("4. Salir")#salir del programa
+    print("4. Divion") #despliega el mensaje que es una division
+    print("5. Salir")#salir del programa
     opcion = input("ingresar el numero de la opcion deseada:") #ingresar la opcion deseada
 
     if opcion == '1': #ingresar opcion 1
@@ -65,8 +73,10 @@ while True:#estructura
     if opcion == '3': #ingresar opcion 3
         MULTIPLICACION()  #multiplicacion  
 
+    if opcion == '4':#ingresar opcion 4
+        DIVISION()   #division
 
-    elif opcion == '4':#opcion 5
+    elif opcion == '5':#opcion 5
         print("/nSaliendo del sistema... ¡Hasta pronto!")  #despliega un mensaje de salida y despedida 
         break # un bucle "salir"
     else:#estructura
